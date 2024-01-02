@@ -1,0 +1,6 @@
+/* global css reset */
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
