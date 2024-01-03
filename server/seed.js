@@ -11,5 +11,7 @@ db.exec(`CREATE TABLE customers(
     card_payments INTEGER,
     grid_location TEXT,
     avg_wait TEXT,
-    category_ref TEXT
+    category_ref TEXT,
+    mobile_num TEXT,
+    email TEXT
 )`);
