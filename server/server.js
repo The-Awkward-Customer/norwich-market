@@ -18,9 +18,9 @@ app.get("/customers", function (req, res) {
   console.log(req.body);
 });
 
-app.get("/search", (req, res) => {
+app.post("/search", (req, res) => {
   const customers = db.prepare("SELECT * FROM customers").all();
-  const searchTerm = req.body.searchTerm.toLowerCase();
+  const searchTerm = req.body.searchTerm.toLowerCase().trim();
 //responds with the filtered stalls list
   const filteredCustomers = customers.filter((customer) => {
     return customer.trading_name.toLowerCase().includes(searchTerm) ||
