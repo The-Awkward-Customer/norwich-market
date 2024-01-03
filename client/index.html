@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Norwich Marketplace</title>
     <script src="./app.js" defer type="module"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>This is a project about Norwich Market.</h1>
+    <h1>Welcome to Norwich Market Street Food</h1>
+    <form id="searchbar" class="searchbar">
+      <input type="text" placeholder="Search" id="search" class="search" />
+      <button id="submit" class="submitBtn">🔍</button>
+    </form>
+    <div id="filterSec" class="filterSec">
+      <h3>Stalls</h3>
+      <button id="filter">Filter</button
+      ><!--how do we do a dropdown filtering menu?-->
+    </div>
+    <div id="stallList" class="stallList">
+      <div id="sampleCard" class="sampleCard">example</div>
+    </div>
   </body>
 </html>
