@@ -15,6 +15,4 @@ db.exec(`CREATE TABLE customers(
     mobile_num TEXT,
     email TEXT
     categories TEXT
-    coord_x INTEGER
-    coord_y INTEGER
 )`);
