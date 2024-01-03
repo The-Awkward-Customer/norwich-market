@@ -14,4 +14,5 @@ db.exec(`CREATE TABLE customers(
     category_ref TEXT,
     mobile_num TEXT,
     email TEXT
+    categories TEXT
 )`);
