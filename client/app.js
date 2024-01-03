@@ -1,17 +1,41 @@
-// Checks that JS file is working
+// Prints a welcome message to the console to confirm the script is running
 console.log("hello world from Fi, Natalie and Pete!");
 
+// consts for DOM elements
 const searchBar = document.getElementById("searchbar");
 const searchInput = document.getElementById("search");
 const stallList = document.getElementById("stallList");
 
+// smaller function for card creation
+function createStallCard(stall) {
+  const card = document.createElement("div");
+  const h3 = document.createElement("h3");
+  const p = document.createElement("p");
+  const img = document.createElement("img");
+  const customer_uid = document.createElement("h4");
+
+  h3.textContent = stall.trading_name;
+  p.textContent = stall.categories;
+  img.src = stall.profile_pic;
+  customer_uid.textContent = stall.customer_uid;
+
+  card.appendChild(h3);
+  card.appendChild(p);
+  card.appendChild(img);
+  card.appendChild(customer_uid);
+
+  stallList.appendChild(card);
+}
+
+// Function to clear all stall cards from the list
+function clearStallList() {
+  stallList.innerHTML = "";
+}
+
+// Event listener for the search bar submit event
 searchBar.addEventListener("submit", async function (event) {
   event.preventDefault();
-
-  // Get the search term from the input in html
   const searchTerm = searchInput.value;
-
-  // Send the search term to the server
   const response = await fetch("http://localhost:8080/search", {
     method: "POST",
     headers: {
@@ -19,55 +43,21 @@ searchBar.addEventListener("submit", async function (event) {
     },
     body: JSON.stringify({ searchTerm }),
   });
-//returns the stalls which match the search request
+
   const stalls = await response.json();
+  clearStallList(); // Clear the stall list before rendering new results
 
-  // Clear existing stallList content
-  stallList.innerHTML = "";
-  
   // Render the fetched stalls on index.html
-  stalls.forEach(function (stall) {
-    const card = document.createElement("div");
-    const h3 = document.createElement("h3");
-    const p = document.createElement("p");
-    const img = document.createElement("img");
-
-    h3.textContent = stall.trading_name;
-    p.textContent = stall.categories;
-    img.src = stall.profile_pic;
-
-    stallList.appendChild(card);
-    card.appendChild(h3);
-    card.appendChild(p);
-    card.appendChild(img);
-//create more DOM nodes and append as needed - wait for Pete to create fields in DB
-  });
+  stalls.forEach(createStallCard);
 });
 
-// Initial load of stalls - should we change this to get all stalls for browsing?
+// Function to load and display all stalls
 async function displayCards() {
-  // Fetch all stalls from the server
   const response = await fetch("http://localhost:8080/customers");
   const stalls = await response.json();
-  console.log(stalls);
 
-  // Render the fetched stalls
-  stalls.forEach(function (stall) {
-    const card = document.createElement("div");
-    const h3 = document.createElement("h3");
-    const p = document.createElement("p");
-    const img = document.createElement("img");
-
-    h3.textContent = stall.trading_name;
-    p.textContent = stall.categories;
-    img.src = stall.profile_pic;
-
-    stallList.appendChild(card);
-    card.appendChild(h3);
-    card.appendChild(p);
-    card.appendChild(img);
-  });
+  stalls.forEach(createStallCard); // Render the fetched stalls
 }
 
-// Initial load when the page is loaded
+// Initial load of stalls when the page is loaded
 displayCards();
