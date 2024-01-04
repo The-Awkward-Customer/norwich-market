@@ -31,7 +31,8 @@ searchBar.addEventListener("submit", async function (event) {
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
     const img = document.createElement("img");
-
+    
+    card.classList.add("stallCard");
     h3.textContent = stall.trading_name;
     p.textContent = stall.categories;
     img.src = stall.profile_pic;
