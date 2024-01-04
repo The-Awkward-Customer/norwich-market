@@ -27,7 +27,7 @@ function createStallCard(stall) {
   const h3 = document.createElement("h3");
   const p = document.createElement("p");
 
-  const customer_uid = document.createElement("h4");
+  const waitTime = document.createElement("h4");
 
   card.classList.add("stallCard");
   img.classList.add("stallImage");
@@ -38,19 +38,24 @@ function createStallCard(stall) {
   h3.textContent = stall.trading_name;
   p.textContent = stall.categories;
   img.src = stall.profile_pic;
-  customer_uid.textContent = stall.customer_uid;
+  waitTime.textContent = stall.avg_wait;
+
+  waitTime.classList.add("card_wait_time");
 
   card.appendChild(img);
+
   card.appendChild(cont_wrap);
   cont_wrap.appendChild(h3);
   cont_wrap.appendChild(p);
+  card.appendChild(waitTime);
 
-  card.appendChild(customer_uid);
 
-  stallList.appendChild(card);
-  // /customers?id=${customer_uid}`
+  card.classList.add("stallCard");
   card.setAttribute("href", `/profile?/${stall.customer_uid}`);
+
   scrollToStallList();
+  stallList.appendChild(card);
+
 }
 
 // Function to clear all stall cards from the list
@@ -74,7 +79,6 @@ searchBar.addEventListener("submit", async function (event) {
   clearStallList(); // Clear the stall list before rendering new results
 
   // Render the fetched stalls on index.html
-
   stalls.forEach(createStallCard);
 });
 
