@@ -6,27 +6,51 @@ const searchBar = document.getElementById("searchbar");
 const searchInput = document.getElementById("search");
 const stallList = document.getElementById("stallList");
 
+function scrollToStallList() {
+  const stallListElement = document.querySelector(".stallList");
+
+  // Get the position of the .stallList element relative to the document
+  const topOffset = stallListElement.getBoundingClientRect().top;
+
+  // Scroll to the top offset of the .stallList element
+  window.scrollTo({
+    top: topOffset,
+    behavior: "smooth", // Optional: Add smooth scrolling behavior
+  });
+}
 // smaller function for card creation
 function createStallCard(stall) {
   const card = document.createElement("a");
+  const img = document.createElement("img");
+
+  const cont_wrap = document.createElement("div");
   const h3 = document.createElement("h3");
   const p = document.createElement("p");
-  const img = document.createElement("img");
+
   const customer_uid = document.createElement("h4");
+
+  card.classList.add("stallCard");
+  img.classList.add("stallImage");
+  cont_wrap.classList.add("cont_wrap");
+  h3.classList.add("card_title");
+  p.classList.add("descr");
 
   h3.textContent = stall.trading_name;
   p.textContent = stall.categories;
   img.src = stall.profile_pic;
   customer_uid.textContent = stall.customer_uid;
 
-  card.appendChild(h3);
-  card.appendChild(p);
   card.appendChild(img);
+  card.appendChild(cont_wrap);
+  cont_wrap.appendChild(h3);
+  cont_wrap.appendChild(p);
+
   card.appendChild(customer_uid);
 
   stallList.appendChild(card);
   // /customers?id=${customer_uid}`
   card.setAttribute("href", `/profile?/${stall.customer_uid}`);
+  scrollToStallList();
 }
 
 // Function to clear all stall cards from the list

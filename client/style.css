@@ -9,14 +9,16 @@
 :root {
   --main-bg-color: white;
   --main-div-color: lightgray;
-  --font-type: arial;
+  --font-type: "Roboto Slab", serif;
+
   --h1-color: #000000;
   --h3-color: #242121;
   --p-color: #000000;
   --h1-size: 2rem;
 }
 
-.indexBody, .profileBody {
+.indexBody,
+.profileBody {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -34,14 +36,14 @@ h1 {
   color: var(--h1-color);
   font-size: var(--h1-size);
 }
-#searchbar {
+.searchbar {
   display: flex;
   padding: 10px;
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
 }
-#stallList {
+.stallList {
   display: flex;
   padding: 10px 20px;
   flex-direction: column;
@@ -59,6 +61,21 @@ h1 {
   border: 1px solid #f2f2f2;
   background: var(--main-div-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.stallImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.cont_wrap {
+  background-color: lightcoral;
+}
+.card_title {
+  background-color: lightcyan;
+}
+.card_descr {
+  background-color: lightgoldenrodyellow;
 }
 
 button,
@@ -108,4 +125,12 @@ a:visited {
   border-radius: 4px;
   width: 32px;
   height: 32px;
+}
+.header {
+  display: flex;
+  width: 100%;
+  background-image: url(https://lh3.googleusercontent.com/p/AF1QipOvKpgQW5Xx4sIfFIczOvMO5k3z40XtJY1bv8hP=s1360-w1360-h1020);
+  height: 300px;
+  background-size: cover;
+  background-position: center;
 }
