@@ -38,3 +38,12 @@ Customers find it difficult to identify rotating or seasonal specials due to loc
 <h2>Wireframe</h2>
 <p><a href = "https://www.figma.com/file/T0kxORH2tcjK2tftoGh4k3/Norwich-Market?type=design&node-id=0%3A1&mode=dev">Click here to view </a></p>
 
+<h2>A list of any libraries, frameworks, or packages that your application requires in order to properly function</h2>
+<ul><li>Cors: <a href = "https://www.npmjs.com/package/cors">(https://www.npmjs.com/package/cors)</a></li>
+<li>Express: <a href = "https://expressjs.com/">(https://expressjs.com/)</a></li>
+<li>Vite: <a href = "https://vitejs.dev/"> (https://vitejs.dev/)</a></li>
+<li>BetterSQLite3 <a href = "https://www.npmjs.com/package/better-sqlite3"> (https://www.npmjs.com/package/better-sqlite3)</a></li>
+  
+</ul>
+
+
