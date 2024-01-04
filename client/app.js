@@ -26,7 +26,7 @@ function createStallCard(stall) {
 
   stallList.appendChild(card);
   // /customers?id=${customer_uid}`
-  card.setAttribute("href", `/profile?id=${stall.customer_uid}`);
+  card.setAttribute("href", `/profile?/${stall.customer_uid}`);
 }
 
 // Function to clear all stall cards from the list
