@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve("main/index.html"),
-        calendar: resolve("profile/profile.html"),
+        profile: resolve("profile/profile.html"),
       },
     },
   },
