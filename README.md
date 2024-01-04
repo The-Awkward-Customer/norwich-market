@@ -8,3 +8,6 @@ by Fi, Natalie & Pete
 <li>npm run build - creates dist file for build </li>
 <li>npm run server - boots up local server</li>
 </ul>
+<h2>Product Description</h2>
+<p>An app to help a user find a suitable street food stall on a market. The user can search by keyword for name, cuisine, featured menu items. Once filtered the user can select one stall to look at in more detail, to find opening hours, payment options and location on the market.</p>
+<h2>Problem definition</h2>
