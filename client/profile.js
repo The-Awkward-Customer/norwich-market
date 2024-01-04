@@ -10,7 +10,9 @@ var lastPart = parts.pop(); // This is the part after the last '/'
 console.log(lastPart);
 
 async function getCustomerUid() {
-  const response = await fetch(`http://localhost:8080/profile/${lastPart}`);
+  const response = await fetch(
+    `https://norwich-market-server.onrender.com/profile/${lastPart}`
+  );
   const customerData = await response.json();
   console.log(customerData);
   return customerData[0];
@@ -27,7 +29,7 @@ async function renderProfile() {
   const email = document.getElementById("email");
   const cash = document.getElementById("cash");
   const card = document.getElementById("card");
-  const categories= document.getElementById("categories");
+  const categories = document.getElementById("categories");
   const description = document.getElementById("description");
 
   logo.src = customerData.profile_pic;
@@ -49,4 +51,3 @@ async function renderProfile() {
 }
 
 renderProfile();
-
