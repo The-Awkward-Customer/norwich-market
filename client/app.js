@@ -48,7 +48,9 @@ searchBar.addEventListener("submit", async function (event) {
   clearStallList(); // Clear the stall list before rendering new results
 
   // Render the fetched stalls on index.html
+
   stalls.forEach(createStallCard);
+
 });
 
 // Function to load and display all stalls
