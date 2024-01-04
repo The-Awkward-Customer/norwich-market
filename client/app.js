@@ -49,13 +49,11 @@ function createStallCard(stall) {
   cont_wrap.appendChild(p);
   card.appendChild(waitTime);
 
-
   card.classList.add("stallCard");
   card.setAttribute("href", `/profile?/${stall.customer_uid}`);
 
   scrollToStallList();
   stallList.appendChild(card);
-
 }
 
 // Function to clear all stall cards from the list
@@ -67,13 +65,16 @@ function clearStallList() {
 searchBar.addEventListener("submit", async function (event) {
   event.preventDefault();
   const searchTerm = searchInput.value;
-  const response = await fetch("http://localhost:8080/search", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ searchTerm }),
-  });
+  const response = await fetch(
+    "https://norwich-market-server.onrender.com/search",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ searchTerm }),
+    }
+  );
 
   const stalls = await response.json();
   clearStallList(); // Clear the stall list before rendering new results
@@ -84,7 +85,9 @@ searchBar.addEventListener("submit", async function (event) {
 
 // Function to load and display all stalls
 async function displayCards() {
-  const response = await fetch("http://localhost:8080/customers");
+  const response = await fetch(
+    "https://norwich-market-server.onrender.com/customers"
+  );
   const stalls = await response.json();
 
   stalls.forEach(createStallCard); // Render the fetched stalls
