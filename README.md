@@ -16,5 +16,5 @@ Click here to visit our deployed project: <a href = "http://blah">Market Project
 <h2>Overall problem domain</h2>
 
 <h2>Wireframe</h2>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FT0kxORH2tcjK2tftoGh4k3%2FNorwich-Market%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddev" allowfullscreen></iframe>
+<p><iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FT0kxORH2tcjK2tftoGh4k3%2FNorwich-Market%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddev" allowfullscreen></iframe></p>
 
