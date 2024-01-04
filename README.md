@@ -28,6 +28,13 @@ Customers find it difficult to identify rotating or seasonal specials due to loc
 <li>Stall owners have to propagate up to date information across multiple platforms</li>
   
 </ul>
+<h2>How this project solves some of these problems</h2>
+<ul>
+  <li>Users will open the profile of one stall to find its location - these are stored in coordinates in our database so can be changed easily</li>
+  <li>Mobile first app so can be used whilst the user is on the move on the way to as well as when at the market</li>
+  <li>Average wait time is displayed both on index of stalls and on profile</li>
+  <li>Profile card can be easily shared via message/chat to aid communication and planning </li>
+</ul>
 <h2>Wireframe</h2>
 <p><a href = "https://www.figma.com/file/T0kxORH2tcjK2tftoGh4k3/Norwich-Market?type=design&node-id=0%3A1&mode=dev">Click here to view </a></p>
 
