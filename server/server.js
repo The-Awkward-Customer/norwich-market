@@ -35,13 +35,20 @@ app.post("/search", (req, res) => {
 
 // api endpoint for customer_uid specific data
 // http://localhost:8080/customerLocation/1
-app.get("/customerLocation/:id", (req, res) => {
+app.get("/profile/:id", (req, res) => {
   const customer = db
     .prepare("SELECT * FROM customers WHERE customer_uid = ?")
     .all(req.params.id);
   res.json(customer);
 });
 
-app.listen(port, () => {
+// app.get("/customerLocation/:id", (req, res) => {
+//   const customer = db
+//     .prepare("SELECT * FROM customers WHERE customer_uid = ?")
+//     .all(req.params.id);
+//   res.json(customer);
+// });
+
+app.listen(8080, () => {
   console.log("Server is running");
 });

@@ -8,7 +8,7 @@ const stallList = document.getElementById("stallList");
 
 // smaller function for card creation
 function createStallCard(stall) {
-  const card = document.createElement("div");
+  const card = document.createElement("a");
   const h3 = document.createElement("h3");
   const p = document.createElement("p");
   const img = document.createElement("img");
@@ -25,6 +25,8 @@ function createStallCard(stall) {
   card.appendChild(customer_uid);
 
   stallList.appendChild(card);
+  // /customers?id=${customer_uid}`
+  card.setAttribute("href", `/profile?/${stall.customer_uid}`);
 }
 
 // Function to clear all stall cards from the list
@@ -50,7 +52,6 @@ searchBar.addEventListener("submit", async function (event) {
   // Render the fetched stalls on index.html
 
   stalls.forEach(createStallCard);
-
 });
 
 // Function to load and display all stalls
