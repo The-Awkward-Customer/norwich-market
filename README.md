@@ -1,7 +1,7 @@
 <h1>Norwich Market Project</h1>
-<h2>Tedam Members</h2>
+<h2>Team Members</h2>
 <a href = "https://github.com/mrskisawesome">Fee</a>, <a href = "https://github.com/nataliehhh">Natalie </a>& <a href = "https://github.com/The-Awkward-Customer"> Pete</a>
-
+<i>n.b. Throughout the project we both pair programmed, solo programmed and sent snippets to one another via branches and discord, so the commits made to this project may not necessarily represent what code we have worked on i.e. sometimes we may have been a driver, sometimes a navigator and sometimes a solo programmer.<i>
 <h2>Demo</h2>
 
 <h2>Commands</h2>
