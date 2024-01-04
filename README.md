@@ -46,4 +46,9 @@ Customers find it difficult to identify rotating or seasonal specials due to loc
   
 </ul>
 
-
+<h2>We’d like to thank:</h2>
+<ul><li>
+  All TAs at <a href = "https://techeducators.co.uk/">Tech Educators</a> for all of their support to clear our blocks!</li>
+  <li>The 'magic boxes' ChatGPT and Bard for out of hours support</li>
+  <li>Stallholders who deliver exceptional street food at Norwich Market for providing the inpsiration for this project
+</li></ul>
