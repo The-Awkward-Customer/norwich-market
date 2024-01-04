@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve("main/index.html"),
-        profile: resolve("profile/profile.html"),
+        main: resolve("index.html"),
+        profile: resolve("profile/index.html"),
       },
     },
   },
