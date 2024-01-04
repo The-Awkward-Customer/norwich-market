@@ -1,6 +1,6 @@
 <h1>Norwich Market Project</h1>
 <h2>Tedam Members</h2>
-<a href = "https://github.com/mrskisawesome">Fee,</a>, <a href = "https://github.com/nataliehhh">Natalie &</a> <a href = Pete
+<a href = "https://github.com/mrskisawesome">Fee</a>, <a href = "https://github.com/nataliehhh">Natalie </a>& <a href = "https://github.com/The-Awkward-Customer"> Pete</a>
 
 <h2>Demo</h2>
 
