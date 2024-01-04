@@ -1,6 +1,8 @@
 <h1>Norwich Market Project</h1>
 
-by Fi, Natalie & Pete
+by Fee, Natalie & Pete
+
+<h2>Demo</h2>
 
 <h2>Commands</h2>
 <ul>
