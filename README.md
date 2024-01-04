@@ -5,7 +5,7 @@ Click here to visit our deployed project: <a href = "http://blah">Market Project
 <p><i>n.b. Throughout the project we both pair programmed, solo programmed and sent snippets to one another via branches and discord, so the commits made to this project may not necessarily represent what code we have worked on i.e. sometimes we may have been a driver, sometimes a navigator and sometimes a solo programmer.</i></p>
 <h2>Demo</h2>
 
-<h2>Commands</h2>
+<h2>Commands to run project</h2>
 <ul>
 <li>npm run dev - runs dev environment locally</li>
 <li>npm run build - creates dist file for build </li>
