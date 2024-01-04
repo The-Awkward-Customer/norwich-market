@@ -7,130 +7,358 @@
 
 /* define variables */
 :root {
-  --main-bg-color: white;
-  --main-div-color: lightgray;
+  --brand-blue: #add8e6;
+  --brand-lightblue: #e0ffff;
+  --brand-red: tomato;
+  --brand-softblack: #242121;;
   --font-type: "Roboto Slab", serif;
 
-  --h1-color: #000000;
-  --h3-color: #242121;
+  --heading-color: #ffffff;
   --p-color: #000000;
-  --h1-size: 2rem;
 }
 
-.indexBody,
+@media only screen and (max-width: 600px) {
+.indexBody {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  font-family: var(--font-type);
+  background: var(--brand-blue);
+}
 .profileBody {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   width: 100vw;
-  padding: 1rem;
+  padding: 1.5rem;
   gap: 2rem;
+  font-family: var(--font-type);
+  background: var(--brand-blue);
 }
-
-h1 {
+.header {
   display: flex;
+  flex-direction: column;
   padding: 10px;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 10px;
-  color: var(--h1-color);
-  font-size: var(--h1-size);
+  width: 100%;
+  background-image: url(https://lh3.googleusercontent.com/p/AF1QipOvKpgQW5Xx4sIfFIczOvMO5k3z40XtJY1bv8hP=s1360-w1360-h1020);
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+}
+h1 {
+  color: var(--brand-red);
+  font-size: 3rem;
+  font-family: var(--font-type);
+  text-shadow: -1px -1px 0 #000, /* Top left */ 1px -1px 0 #000,
+  /* Top right */ -1px 1px 0 #000, /* Bottom left */ 1px 1px 0 #000; /* Bottom right */
+  text-wrap: wrap;
+}
+h2 {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  font-family: var(--font-type);
+  text-shadow: -1px -1px 0 #000, /* Top left */ 1px -1px 0 #000,
+  /* Top right */ -1px 1px 0 #000, /* Bottom left */ 1px 1px 0 #000; /* Bottom right */
+  text-wrap: wrap;
 }
 .searchbar {
   display: flex;
-  padding: 10px;
+  padding: 1rem;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
+}
+.search {
+  width: 360px;
+  height: 40px;
+  max-width: 80%;
+  border: 2px solid var(--brand-softblack);
+  font-size: 1rem;
+}
+.stallsTitle {
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 .stallList {
   display: flex;
-  padding: 10px 20px;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+  margin-left: 1rem;
 }
-
 .stallCard {
   display: flex;
-  padding: 10px 2px;
-  align-items: flex-start;
-  gap: 8px;
+  padding: 10px 6px;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95%;
+  height: 120px;
   align-self: stretch;
   border-radius: 8px;
   border: 1px solid #f2f2f2;
-  background: var(--main-div-color);
+  background: var(--brand-lightblue);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .stallImage {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
 }
 .cont_wrap {
-  background-color: lightcoral;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .card_title {
-  background-color: lightcyan;
+  text-transform: capitalize;
+  font-size: 1.1rem;
 }
-.card_descr {
-  background-color: lightgoldenrodyellow;
+.descr {
+  font-size: 0.9rem;
 }
-
+.card_wait_time {
+  color: var(--brand-red);
+  font-size: 0.9rem;
+}
 button,
 a:link,
 a:visited {
-  background-color: transparent;
+  background-color: var(--brand-blue);
   border: none;
   font-weight: bold;
   text-decoration: none;
   font-size: 1rem;
   color: black;
-  width: 64px;
   text-align: left;
+  font-family: var(--font-type);
 }
-
-.logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 4px;
-  background-color: lightgray;
+#logo {
+  max-width: 90%;
+  border-radius: 6px;
 }
-
-.info1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 10px;
+  font-family: var(--font-type);
 }
-
+.info1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.info h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.info p {
+  font-size: 1rem;
+}
+#waitTime {
+  color: var(--brand-red);
+}
+.moreInfo {
+  font-family: var(--font-type);
+  text-wrap: wrap;
+}
 #map {
   background-color: lightgray;
   display: grid;
   grid-template: repeat(10, 1fr) / repeat(8, 1fr);
   padding: 1rem;
   gap: 8px;
+  border-radius: 6px;
   justify-content: center;
   height: 340px;
 }
-
 #map div {
   background-color: gray;
   border-radius: 4px;
   width: 32px;
   height: 32px;
 }
-.header {
-  display: flex;
-  width: 100%;
-  background-image: url(https://lh3.googleusercontent.com/p/AF1QipOvKpgQW5Xx4sIfFIczOvMO5k3z40XtJY1bv8hP=s1360-w1360-h1020);
-  height: 300px;
-  background-size: cover;
-  background-position: center;
+#map div.selectedStall {
+  background-color: var(--brand-red);
 }
+}
+
+@media only screen and (min-width: 600px) {
+  .indexBody {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    font-family: var(--font-type);
+    background: var(--brand-blue);
+  }
+  .profileBody {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 1.5rem;
+    gap: 2rem;
+    font-family: var(--font-type);
+    background: var(--brand-blue);
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    background-image: url(https://lh3.googleusercontent.com/p/AF1QipOvKpgQW5Xx4sIfFIczOvMO5k3z40XtJY1bv8hP=s1360-w1360-h1020);
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+  }
+  h1 {
+    color: var(--brand-red);
+    font-size: 3rem;
+    font-family: var(--font-type);
+    text-shadow: -1px -1px 0 #000, /* Top left */ 1px -1px 0 #000,
+    /* Top right */ -1px 1px 0 #000, /* Bottom left */ 1px 1px 0 #000; /* Bottom right */
+    text-wrap: wrap;
+  }
+  h2 {
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-family: var(--font-type);
+    text-shadow: -1px -1px 0 #000, /* Top left */ 1px -1px 0 #000,
+    /* Top right */ -1px 1px 0 #000, /* Bottom left */ 1px 1px 0 #000; /* Bottom right */
+    text-wrap: wrap;
+  }
+  .searchbar {
+    display: flex;
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .search {
+    width: 360px;
+    height: 40px;
+    max-width: 80%;
+    border: 2px solid var(--brand-softblack);
+    font-size: 1rem;
+  }
+  .stallsTitle {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  .stallList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 1rem;
+  }
+  .stallCard {
+    display: flex;
+    padding: 10px 6px;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    height: 120px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+    background: var(--brand-lightblue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .stallImage {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .cont_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .card_title {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+  }
+  .descr {
+    font-size: 0.9rem;
+  }
+  .card_wait_time {
+    color: var(--brand-red);
+    font-size: 0.9rem;
+  }
+  button,
+  a:link,
+  a:visited {
+    background-color: var(--brand-blue);
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    text-align: left;
+    font-family: var(--font-type);
+  }
+  #logo {
+    max-width: 90%;
+    border-radius: 6px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--font-type);
+  }
+  .info1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .info h3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+  .info p {
+    font-size: 1rem;
+  }
+  #waitTime {
+    color: var(--brand-red);
+  }
+  .moreInfo {
+    font-family: var(--font-type);
+    text-wrap: wrap;
+  }
+  #map {
+    background-color: lightgray;
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(8, 1fr);
+    padding: 1rem;
+    gap: 8px;
+    border-radius: 6px;
+    justify-content: center;
+    height: 340px;
+  }
+  #map div {
+    background-color: gray;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+  }
+  #map div.selectedStall {
+    background-color: var(--brand-red);
+  }
+  }

@@ -38,7 +38,7 @@ function createStallCard(stall) {
   h3.textContent = stall.trading_name;
   p.textContent = stall.categories;
   img.src = stall.profile_pic;
-  waitTime.textContent = stall.avg_wait;
+  waitTime.textContent = `⏰ ${stall.avg_wait} avg`;
 
   waitTime.classList.add("card_wait_time");
 
@@ -47,7 +47,7 @@ function createStallCard(stall) {
   card.appendChild(cont_wrap);
   cont_wrap.appendChild(h3);
   cont_wrap.appendChild(p);
-  card.appendChild(waitTime);
+  cont_wrap.appendChild(waitTime);
 
 
   card.classList.add("stallCard");

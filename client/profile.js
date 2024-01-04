@@ -32,7 +32,7 @@ async function renderProfile() {
 
   logo.src = customerData.profile_pic;
   name.textContent = customerData.trading_name;
-  waitTime.textContent = customerData.avg_wait;
+  waitTime.textContent = `⏰${customerData.avg_wait} avg`;
   mobileNumber.textContent = customerData.mobile_num;
   email.textContent = customerData.email;
   categories.textContent = customerData.categories;
